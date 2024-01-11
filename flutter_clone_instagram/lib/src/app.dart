@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clone_instagram/src/component/image_data.dart';
 import 'package:flutter_clone_instagram/src/controller/bottom_nav_controller.dart';
@@ -12,16 +11,25 @@ class App extends GetView<BottomNavController> {
     return WillPopScope(
       child: Obx(
       ()=> Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.white,
           appBar: AppBar(),
-          body: Container(),
+          body: IndexedStack(
+            index: controller.pageIndex.value,
+            children: [
+              Center(child: Container(child: Text('HOME'),)),
+              Center(child: Container(child: Text('SEARCH'),)),
+              Center(child: Container(child: Text('UPLOAD'),)),
+              Center(child: Container(child: Text('ACTIVITY'),)),
+              Center(child: Container(child: Text('MYPAGE'),)),
+            ],
+          ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             showSelectedLabels: false,
             showUnselectedLabels: false,
             currentIndex: controller.pageIndex.value,
             elevation: 0,
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.white,
             onTap: controller.changeBottomNav,
             items: [
               BottomNavigationBarItem(
@@ -59,9 +67,7 @@ class App extends GetView<BottomNavController> {
           ),
       ),
     ),
-      onWillPop: () async {
-          return false; // true를 반환시 앱 종료됨
-        },
+      onWillPop: controller.willPopAction,
     );
   }
 }

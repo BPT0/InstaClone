@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clone_instagram/src/App.dart';
+import 'package:flutter_clone_instagram/src/app.dart';
 import 'package:flutter_clone_instagram/src/binding/init_bindings.dart';
 import 'package:get/get.dart';
 
