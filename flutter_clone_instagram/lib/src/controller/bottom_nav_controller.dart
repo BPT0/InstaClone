@@ -69,7 +69,7 @@ class BottomNavController extends GetxController {
       bottomHistory.removeLast();
       var index = bottomHistory.last;
       changeBottomNav(index, hasGesture: false);
-      return Future.value(false);
+      return false;
     }
   }
 }

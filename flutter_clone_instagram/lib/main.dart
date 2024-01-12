@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Insta Clone',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       initialBinding: InitBinding(),
-      home: const App()
+      home: const App(),
+      debugShowCheckedModeBanner: false,
     ); // bottom네비게이션 관리, indexed 스택 써서 페이지에 맞게끔 변환시킴
   }
 }
