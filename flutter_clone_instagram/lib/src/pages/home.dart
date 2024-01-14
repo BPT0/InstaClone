@@ -3,6 +3,8 @@ import 'package:flutter_clone_instagram/src/app.dart';
 import 'package:flutter_clone_instagram/src/component/avata_widget.dart';
 import 'package:flutter_clone_instagram/src/component/image_data.dart';
 
+import '../component/post_widget.dart';
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -65,6 +67,13 @@ class Home extends StatelessWidget {
         ]));
   }
 
+  Widget _postList(){
+    // 1.헤더, 2.이미지, 3.좋아요 등 기능 부분, 4.댓글 부분
+    return Column(
+      children: List.generate(50, (index) => const PostWidget()).toList(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,6 +99,7 @@ class Home extends StatelessWidget {
       body: ListView(
         children: [
           _storyBoardList(),
+          _postList(),
         ],
       ),
     );
