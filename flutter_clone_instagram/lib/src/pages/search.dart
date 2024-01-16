@@ -66,7 +66,7 @@ class _SearchState extends State<Search> {
         ),
         const Padding(
           padding: EdgeInsets.only(left: 5.0, right: 15.0),
-          child: Icon(Icons.local_airport),
+          child: Icon(Icons.search),
         ),
       ],
     );
