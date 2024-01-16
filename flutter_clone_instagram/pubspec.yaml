@@ -39,6 +39,7 @@ dependencies:
   expandable: ^5.0.1
   text: ^0.2.0
   expandable_text: ^2.3.0
+  quiver: ^3.2.1
 
 dev_dependencies:
   flutter_test:
