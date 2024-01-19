@@ -1,5 +1,4 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_clone_instagram/src/app.dart';
 import 'package:flutter_clone_instagram/src/component/avata_widget.dart';

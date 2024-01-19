@@ -1,9 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 원의 다양한 모양을 분류하기 위해 enum으로 type을 분류
-enum AvataType { OTHER_STORY_AVATA, MY_STORY_AVATA, POST_AVATA }
+enum AvataType { OTHER_STORY_AVATA, MY_STORY_AVATA, POST_AVATA, HISTORY_AVATA }
 
 class AvataWidget extends StatelessWidget {
   bool? hasStory;
@@ -74,6 +73,27 @@ class AvataWidget extends StatelessWidget {
     );
   }
 
+  Widget HistoryAvata(){
+    return Container(
+      padding: const EdgeInsets.all(2),
+      decoration: const BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white,
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(size!),
+        child: SizedBox(
+          width: 45,
+          height: 45,
+          child: CachedNetworkImage(
+            imageUrl: thumbPath,
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     switch (type) {
@@ -83,6 +103,8 @@ class AvataWidget extends StatelessWidget {
         return MyStoryAvataWidget();
       case AvataType.POST_AVATA:
         return PostAvataWidget();
+      case AvataType.HISTORY_AVATA:
+        return HistoryAvata();
     }
     return Container();
   }

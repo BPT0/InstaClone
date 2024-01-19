@@ -17,7 +17,7 @@ class ImageData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.asset(
         icon,
-        width: width! / Get.mediaQuery.devicePixelRatio,
+        width: width / Get.mediaQuery.devicePixelRatio,
     );
   }
 }

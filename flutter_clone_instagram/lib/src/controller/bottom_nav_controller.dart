@@ -8,14 +8,12 @@ import '../pages/upload.dart';
 // value 를 구분하기 위해 enum을 사용해서 코드 가독성 높이기
 enum PageNum { HOME, SEARCH, UPLOAD, ACTIVITY, MYPAGE }
 
-/**
- * 1. 아이콘 누를대마다 페이지 전환하기
- *  + 업로드 이벤트 별도 처리
- * 2.뒤로가기 버튼을 눌러서 이전 페이지로 돌아가기
- * 3.같은 버튼을 눌렀을때 
- *  - 히스토리 추가x
- *  - 히스토리를 누적
- */
+/// 1. 아이콘 누를대마다 페이지 전환하기
+///  + 업로드 이벤트 별도 처리
+/// 2.뒤로가기 버튼을 눌러서 이전 페이지로 돌아가기
+/// 3.같은 버튼을 눌렀을때 
+///  - 히스토리 추가x
+///  - 히스토리를 누적
 class BottomNavController extends GetxController {
   RxInt pageIndex = 0.obs;
   List<int> bottomHistory = [0];

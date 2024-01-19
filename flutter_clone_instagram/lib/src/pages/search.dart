@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -77,44 +76,6 @@ class _SearchState extends State<Search> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          /*Expanded(
-            child: Column(
-              children: [
-                Container(
-                  height: 140,
-                  color: Colors.red,
-                ),
-                Container(
-                  height: 140,
-                  color: Colors.blue,
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                Container(
-                  height: 140,
-                  color: Colors.blue,
-                ),
-                Container(
-                  height: 140,
-                  color: Colors.red,
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                Container(
-                  height: 280,
-                  color: Colors.grey,
-                ),
-              ],
-            ),
-          ),*/
           ...List.generate(
             groupBox.length,
             (index) => Expanded(
@@ -136,16 +97,6 @@ class _SearchState extends State<Search> {
                     ),
                   )
                 ],
-                /*children: [
-                  Container(
-                    height: Get.width*0.33*groupBox[index],
-                    color: Colors.red,
-                  ),
-                  Container(
-                    height: 140,
-                    color: Colors.blue,
-                  ),
-                ],*/
               ),
             ),
           ),
