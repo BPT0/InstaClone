@@ -3,6 +3,7 @@ import 'package:flutter_clone_instagram/src/component/image_data.dart';
 import 'package:flutter_clone_instagram/src/controller/bottom_nav_controller.dart';
 import 'package:flutter_clone_instagram/src/pages/activity_history.dart';
 import 'package:flutter_clone_instagram/src/pages/home.dart';
+import 'package:flutter_clone_instagram/src/pages/my_page.dart';
 import 'package:flutter_clone_instagram/src/pages/search.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +23,7 @@ class App extends GetView<BottomNavController> {
               const Search(),
               Container(),
               const ActivityHistory(),
-              Center(child: Container(child: const Text('MYPAGE'),)),
+              MyPage(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
